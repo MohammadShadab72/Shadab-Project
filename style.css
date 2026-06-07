@@ -1,0 +1,529 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+/* ============================= */
+/* Header Section की Styling      */
+/* ============================= */
+
+header {
+  background-color: #B4DC7F; /* हेडर का बैकग्राउंड maroon */
+  color: #FEFFA5; /* टेक्स्ट सफेद */
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ऊपर का div */
+.top-ofThe-page {
+  display: flex; /* हेडिंग और नेविगेशन को एक लाइन में */
+  justify-content: space-between; /* दोनों को किनारों पर रखा */
+  align-items: center; /* बराबर ऊँचाई पर */
+  flex-wrap: wrap; /* मोबाइल पर responsive */
+}
+
+/* संस्था का नाम */
+.top-ofThe-page h2 {
+  font-size: 1.8rem; /* बड़ा फॉन्ट */
+  font-weight: bold; /* मोटा टेक्स्ट */
+  margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none; /* डिफ़ॉल्ट bullets हटाए */
+  display: flex;
+  gap: 20px; /* लिंक के बीच जगह */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none; /* underline हटाया */
+  color: white; /* टेक्स्ट सफेद */
+  font-weight: 500; /* हल्का मोटा टेक्स्ट */
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  background-color: white; /* hover पर बैकग्राउंड सफेद */
+  color: maroon; /* hover पर टेक्स्ट maroon */
+  font-weight: bold;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none; /* Desktop पर छुपा */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* मोबाइल पर default में छुपा */
+    flex-direction: column;
+    background-color: maroon;
+    position: absolute;
+    top: 60px; /* header के नीचे */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav ul.show {
+    display: flex; /* क्लिक करने पर दिखे */
+  }
+
+  .menu-toggle {
+    display: block; /* मोबाइल पर hamburger दिखे */
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* default में छुपा */
+    flex-direction: column;
+    background-color: maroon;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 15px;
+    border-radius: 5px;
+
+    /* Animation के लिये */
+    transform: translateX(100%); /* बाहर छुपा */
+    transition: transform 0.3s ease-in-out; /* smooth slide */
+  }
+
+  nav ul.show {
+    display: flex;
+    transform: translateX(0); /* अंदर slide होकर दिखे */
+  }
+}
+
+/* ============================= */
+/* Hero Section की Styling        */
+/* ============================= */
+
+.hero-section {
+  background-image: url(https://t3.ftcdn.net/jpg/03/54/29/64/360_F_354296454_0c5wDTLn3wsqXwru1fEekghkJaCkERL4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black; /* टेक्स्ट का रंग सफेद रखा गया */
+  text-align: left; /* सब कुछ बीच में align किया गया */
+  padding: 60px 20px; /* ऊपर-नीचे और किनारों पर जगह दी गई */
+}
+
+/* लोगो इमेज की Styling */
+.logo-img {
+  width: 120px; /* लोगो की चौड़ाई */
+  height: auto; /* ऊँचाई auto ताकि इमेज distort न हो */
+  margin-bottom: 20px; /* लोगो के नीचे थोड़ी जगह */
+  border-radius: 10px; /* लोगो को हल्का गोल किनारा दिया */
+  border: 3px solid white; /* लोगो के चारों ओर सफेद बॉर्डर */
+}
+
+/* मुख्य हेडिंग (संस्था का नाम) */
+.hero-content h1 {
+  font-size: 2.5rem; /* बड़ा फॉन्ट साइज */
+  margin-bottom: 10px; /* नीचे थोड़ी जगह */
+  font-weight: bold; /* टेक्स्ट को मोटा किया */
+}
+
+/* लोकेशन वाली हेडिंग */
+.hero-content h2 {
+  font-size: 1.8rem; /* थोड़ा छोटा फॉन्ट */
+  margin-bottom: 20px; /* नीचे जगह */
+  font-style: italic; /* टेक्स्ट को तिरछा किया */
+}
+
+/* टैगलाइन */
+.tagline {
+  font-size: 1.2rem; /* मध्यम साइज */
+  margin-bottom: 10px; /* नीचे जगह */
+  font-weight: 500; /* हल्का मोटा टेक्स्ट */
+}
+
+/* सब-टैगलाइन */
+.sub-tagline {
+  font-size: 1rem; /* सामान्य साइज */
+  margin-bottom: 30px; /* नीचे ज्यादा जगह */
+  font-style: italic; /* तिरछा टेक्स्ट */
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+  display: inline-block; /* बटन को inline-block बनाया */
+  background-color: white; /* बटन का बैकग्राउंड सफेद */
+  color: maroon; /* टेक्स्ट का रंग maroon */
+  padding: 12px 25px; /* बटन के अंदर जगह */
+  font-size: 1rem; /* टेक्स्ट साइज */
+  font-weight: bold; /* टेक्स्ट मोटा */
+  text-decoration: none; /* लिंक का underline हटाया */
+  border-radius: 30px; /* बटन को गोल किनारे दिए */
+  transition: 0.3s ease; /* hover पर smooth transition */
+}
+
+/* Hover Effect */
+.cta-btn:hover {
+  background-color: maroon; /* hover पर बैकग्राउंड maroon */
+  color: white; /* hover पर टेक्स्ट सफेद */
+  border: 2px solid white; /* hover पर सफेद बॉर्डर */
+}
+
+
+/* ============================= */
+/* About Section की Styling       */
+/* ============================= */
+
+.about-section {
+  background-image: url(https://www.shutterstock.com/image-photo/students-studying-outdoors-focused-on-260nw-2534561533.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: maroon; /* टेक्स्ट का रंग maroon */
+  padding: 50px 20px; /* ऊपर-नीचे और किनारों पर जगह */
+  text-align: center; /* टेक्स्ट को बीच में रखा */
+}
+
+/* सेक्शन का मुख्य शीर्षक */
+.about-section h2 {
+  font-size: 2rem; /* बड़ा फॉन्ट */
+  margin-bottom: 30px; /* नीचे जगह */
+  font-weight: bold; /* मोटा टेक्स्ट */
+  border-bottom: 3px solid maroon; /* नीचे maroon लाइन */
+  display: inline-block; /* लाइन सिर्फ टेक्स्ट तक */
+  padding-bottom: 5px; /* टेक्स्ट और लाइन के बीच जगह */
+}
+
+/* मिशन कार्ड */
+.mission-card {
+  background-color: maroon; /* कार्ड का बैकग्राउंड maroon */
+  color: white; /* कार्ड का टेक्स्ट सफेद */
+  padding: 30px; /* अंदर जगह */
+  border-radius: 10px; /* किनारे गोल */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
+  max-width: 800px; /* कार्ड की चौड़ाई */
+  margin: 0 auto; /* कार्ड को बीच में रखा */
+  text-align: left; /* टेक्स्ट बाएँ align */
+}
+
+/* मिशन हेडिंग */
+.mission-card h3 {
+  font-size: 1.5rem; /* मध्यम फॉन्ट */
+  margin-bottom: 15px; /* नीचे जगह */
+  font-weight: bold; /* मोटा टेक्स्ट */
+}
+
+/* मिशन पैराग्राफ */
+.mission-card p {
+  font-size: 1rem; /* सामान्य फॉन्ट */
+  margin-bottom: 20px; /* नीचे जगह */
+  line-height: 1.6; /* टेक्स्ट की लाइन स्पेसिंग */
+}
+
+/* लिस्ट आइटम्स */
+.mission-card ul {
+  list-style: none; /* डिफ़ॉल्ट bullets हटाए */
+  padding: 0;
+}
+
+.mission-card ul li {
+  font-size: 1rem; /* सामान्य फॉन्ट */
+  margin: 10px 0; /* हर आइटम के बीच जगह */
+  padding: 8px 12px; /* अंदर जगह */
+  background-color: #fff; /* आइटम का बैकग्राउंड सफेद */
+  color: maroon; /* टेक्स्ट maroon */
+  border-radius: 5px; /* हल्के गोल किनारे */
+  font-weight: 500; /* हल्का मोटा टेक्स्ट */
+  display: flex; /* emoji और टेक्स्ट को एक लाइन में */
+  align-items: center; /* दोनों को बराबर ऊँचाई पर */
+  gap: 10px; /* emoji और टेक्स्ट के बीच जगह */
+}
+
+/* Hover Effect लिस्ट आइटम्स पर */
+.mission-card ul li:hover {
+  background-color: maroon; /* hover पर बैकग्राउंड maroon */
+  color: white; /* hover पर टेक्स्ट सफेद */
+  transition: 0.3s ease; /* smooth transition */
+}
+
+/* ============================= */
+/* Vision Card की Styling         */
+/* ============================= */
+
+.vision-card {
+  background-color: maroon; /* कार्ड का बैकग्राउंड maroon */
+  color: white; /* टेक्स्ट सफेद */
+  padding: 30px; /* अंदर जगह */
+  border-radius: 10px; /* किनारे गोल */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
+  max-width: 800px; /* कार्ड की चौड़ाई */
+  margin: 40px auto; /* ऊपर-नीचे जगह और बीच में रखा */
+  text-align: left; /* टेक्स्ट बाएँ align */
+}
+
+/* विज़न हेडिंग */
+.vision-card h3 {
+  font-size: 1.5rem; /* मध्यम फॉन्ट */
+  margin-bottom: 15px; /* नीचे जगह */
+  font-weight: bold; /* मोटा टेक्स्ट */
+  border-bottom: 2px solid white; /* नीचे सफेद लाइन */
+  display: inline-block; /* लाइन सिर्फ टेक्स्ट तक */
+  padding-bottom: 5px; /* टेक्स्ट और लाइन के बीच जगह */
+}
+
+/* लिस्ट आइटम्स */
+.vision-card ul {
+  list-style: none; /* डिफ़ॉल्ट bullets हटाए */
+  padding: 0;
+}
+
+.vision-card ul li {
+  font-size: 1rem; /* सामान्य फॉन्ट */
+  margin: 10px 0; /* हर आइटम के बीच जगह */
+  padding: 8px 12px; /* अंदर जगह */
+  background-color: #fff; /* आइटम का बैकग्राउंड सफेद */
+  color: maroon; /* टेक्स्ट maroon */
+  border-radius: 5px; /* हल्के गोल किनारे */
+  font-weight: 500; /* हल्का मोटा टेक्स्ट */
+  display: flex; /* emoji और टेक्स्ट को एक लाइन में */
+  align-items: center; /* दोनों को बराबर ऊँचाई पर */
+  gap: 10px; /* emoji और टेक्स्ट के बीच जगह */
+}
+
+/* Hover Effect लिस्ट आइटम्स पर */
+.vision-card ul li:hover {
+  background-color: maroon; /* hover पर बैकग्राउंड maroon */
+  color: white; /* hover पर टेक्स्ट सफेद */
+  transition: 0.3s ease; /* smooth transition */
+}
+
+/* ============================= */
+/* Work Section की Styling        */
+/* ============================= */
+
+.work-section {
+  background-color: #fff; /* बैकग्राउंड सफेद */
+  color: maroon; /* टेक्स्ट maroon */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.work-section .section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-bottom: 3px solid maroon; /* नीचे maroon लाइन */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.work-list {
+  list-style: none; /* डिफ़ॉल्ट bullets हटाए */
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.work-list li {
+  background-color: maroon; /* आइटम का बैकग्राउंड maroon */
+  color: white; /* टेक्स्ट सफेद */
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: 0.3s ease;
+}
+
+.work-list li:hover {
+  background-color: white; /* hover पर बैकग्राउंड सफेद */
+  color: maroon; /* hover पर टेक्स्ट maroon */
+  border: 2px solid maroon;
+}
+
+/* ============================= */
+/* Donation Section की Styling    */
+/* ============================= */
+
+.donate-section {
+  background-color: maroon; /* बैकग्राउंड maroon */
+  color: white; /* टेक्स्ट सफेद */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.donate-section .section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donate-section .slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.donate-container {
+  display: flex;
+  flex-wrap: wrap; /* मोबाइल पर responsive */
+  justify-content: center;
+  gap: 20px;
+}
+
+.pay-box {
+  background-color: white; /* बॉक्स का बैकग्राउंड सफेद */
+  color: maroon; /* टेक्स्ट maroon */
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.pay-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.pay-box p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.upi-btn {
+  display: inline-block;
+  background-color: maroon;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.upi-btn:hover {
+  background-color: white;
+  color: maroon;
+  border: 2px solid maroon;
+}
+
+/* ============================= */
+/* Footer Section की Styling      */
+/* ============================= */
+
+footer {
+  background-color: #333; /* गहरा ग्रे बैकग्राउंड */
+  color: white; /* टेक्स्ट सफेद */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  margin-top: 15px;
+}
+
+.contact-section p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-section span {
+  display: inline-block;
+  margin: 0 10px;
+  background-color: maroon;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* ============================= */
+/* Responsive Design (Mobile)     */
+/* ============================= */
+
+/* जब स्क्रीन 768px से छोटी हो (Tablet & Mobile) */
+@media (max-width: 768px) {
+  .top-ofThe-page {
+    flex-direction: column; /* हेडिंग और नेविगेशन ऊपर-नीचे हो जाएं */
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* मेन्यू vertical हो जाए */
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .donate-container {
+    flex-direction: column; /* Donation बॉक्स vertical हो जाएं */
+    align-items: center;
+  }
+
+  .pay-box {
+    width: 100%; /* बॉक्स पूरी चौड़ाई ले */
+    max-width: 350px;
+  }
+
+  .work-list {
+    padding: 0 10px; /* लिस्ट किनारों से थोड़ी अंदर */
+  }
+}
+
+/* जब स्क्रीन 480px से छोटी हो (Mobile) */
+@media (max-width: 480px) {
+  .top-ofThe-page h2 {
+    font-size: 1.4rem; /* हेडिंग छोटा कर दिया */
+  }
+
+  nav ul li a {
+    padding: 6px 10px; /* लिंक छोटे */
+    font-size: 0.9rem;
+  }
+
+  .hero-section {
+    padding: 40px 10px; /* Hero सेक्शन compact */
+  }
+
+  .logo-img {
+    width: 90px; /* लोगो छोटा */
+  }
+
+  .mission-card, .vision-card {
+    padding: 20px; /* कार्ड compact */
+  }
+
+  .work-list li {
+    font-size: 0.9rem; /* टेक्स्ट छोटा */
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8rem; /* Footer टेक्स्ट छोटा */
+  }
+}
