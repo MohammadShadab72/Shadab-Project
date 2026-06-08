@@ -14,8 +14,8 @@ html{
 /* ============================= */
 
 header {
-  background-color: #B4DC7F; /* हेडर का बैकग्राउंड maroon */
-  color: #FEFFA5; /* टेक्स्ट सफेद */
+  background-color: #FFCE32; /* हेडर का बैकग्राउंड maroon */
+  color: #1D63FF; /* टेक्स्ट सफेद */
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
   position: sticky;
@@ -49,7 +49,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none; /* underline हटाया */
-  color: white; /* टेक्स्ट सफेद */
+  color: #1D63FF; /* टेक्स्ट सफेद */
   font-weight: 500; /* हल्का मोटा टेक्स्ट */
   padding: 8px 12px;
   border-radius: 5px;
@@ -58,8 +58,8 @@ nav ul li a {
 
 /* Hover Effect */
 nav ul li a:hover {
-  background-color: white; /* hover पर बैकग्राउंड सफेद */
-  color: maroon; /* hover पर टेक्स्ट maroon */
+  background-color: #1D63FF; /* hover पर बैकग्राउंड सफेद */
+  color: #FFCE32; /* hover पर टेक्स्ट maroon */
   font-weight: bold;
 }
 
@@ -68,7 +68,7 @@ nav ul li a:hover {
   display: none; /* Desktop पर छुपा */
   font-size: 1.8rem;
   cursor: pointer;
-  color: white;
+  color: #1D63FF;
 }
 
 /* Mobile Responsive */
@@ -76,7 +76,7 @@ nav ul li a:hover {
   nav ul {
     display: none; /* मोबाइल पर default में छुपा */
     flex-direction: column;
-    background-color: maroon;
+    background-color: #FFCE32 ;
     position: absolute;
     top: 60px; /* header के नीचे */
     right: 0;
@@ -98,7 +98,7 @@ nav ul li a:hover {
   nav ul {
     display: none; /* default में छुपा */
     flex-direction: column;
-    background-color: maroon;
+    background-color: #FFCE32;
     position: absolute;
     top: 60px;
     right: 0;
@@ -137,7 +137,7 @@ nav ul li a:hover {
   height: auto; /* ऊँचाई auto ताकि इमेज distort न हो */
   margin-bottom: 20px; /* लोगो के नीचे थोड़ी जगह */
   border-radius: 10px; /* लोगो को हल्का गोल किनारा दिया */
-  border: 3px solid white; /* लोगो के चारों ओर सफेद बॉर्डर */
+  border: 3px solid #1D63FF; /* लोगो के चारों ओर सफेद बॉर्डर */
 }
 
 /* मुख्य हेडिंग (संस्था का नाम) */
@@ -171,8 +171,8 @@ nav ul li a:hover {
 /* Call-to-Action Button */
 .cta-btn {
   display: inline-block; /* बटन को inline-block बनाया */
-  background-color: white; /* बटन का बैकग्राउंड सफेद */
-  color: maroon; /* टेक्स्ट का रंग maroon */
+  background-color: #FFCE32; /* बटन का बैकग्राउंड सफेद */
+  color: #1D63FF; /* टेक्स्ट का रंग maroon */
   padding: 12px 25px; /* बटन के अंदर जगह */
   font-size: 1rem; /* टेक्स्ट साइज */
   font-weight: bold; /* टेक्स्ट मोटा */
@@ -183,8 +183,8 @@ nav ul li a:hover {
 
 /* Hover Effect */
 .cta-btn:hover {
-  background-color: maroon; /* hover पर बैकग्राउंड maroon */
-  color: white; /* hover पर टेक्स्ट सफेद */
+  background-color: #1D63FF; /* hover पर बैकग्राउंड maroon */
+  color: #FFCE32; /* hover पर टेक्स्ट सफेद */
   border: 2px solid white; /* hover पर सफेद बॉर्डर */
 }
 
@@ -194,11 +194,11 @@ nav ul li a:hover {
 /* ============================= */
 
 .about-section {
-  background-image: url(https://www.shutterstock.com/image-photo/students-studying-outdoors-focused-on-260nw-2534561533.jpg) ;
+  background-color: #1D63FF ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: maroon; /* टेक्स्ट का रंग maroon */
+  color: #FFCE32; /* टेक्स्ट का रंग maroon */
   padding: 50px 20px; /* ऊपर-नीचे और किनारों पर जगह */
   text-align: center; /* टेक्स्ट को बीच में रखा */
 }
@@ -208,15 +208,15 @@ nav ul li a:hover {
   font-size: 2rem; /* बड़ा फॉन्ट */
   margin-bottom: 30px; /* नीचे जगह */
   font-weight: bold; /* मोटा टेक्स्ट */
-  border-bottom: 3px solid maroon; /* नीचे maroon लाइन */
+  border-bottom: 3px solid black; /* नीचे maroon लाइन */
   display: inline-block; /* लाइन सिर्फ टेक्स्ट तक */
   padding-bottom: 5px; /* टेक्स्ट और लाइन के बीच जगह */
 }
 
 /* मिशन कार्ड */
 .mission-card {
-  background-color: maroon; /* कार्ड का बैकग्राउंड maroon */
-  color: white; /* कार्ड का टेक्स्ट सफेद */
+  background-color: #FFCE32; /* कार्ड का बैकग्राउंड maroon */
+  color: #1D63FF; /* कार्ड का टेक्स्ट सफेद */
   padding: 30px; /* अंदर जगह */
   border-radius: 10px; /* किनारे गोल */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
@@ -250,7 +250,7 @@ nav ul li a:hover {
   margin: 10px 0; /* हर आइटम के बीच जगह */
   padding: 8px 12px; /* अंदर जगह */
   background-color: #fff; /* आइटम का बैकग्राउंड सफेद */
-  color: maroon; /* टेक्स्ट maroon */
+  color: #1D63FF; /* टेक्स्ट maroon */
   border-radius: 5px; /* हल्के गोल किनारे */
   font-weight: 500; /* हल्का मोटा टेक्स्ट */
   display: flex; /* emoji और टेक्स्ट को एक लाइन में */
@@ -260,7 +260,7 @@ nav ul li a:hover {
 
 /* Hover Effect लिस्ट आइटम्स पर */
 .mission-card ul li:hover {
-  background-color: maroon; /* hover पर बैकग्राउंड maroon */
+  background-color: #FFCE32; /* hover पर बैकग्राउंड maroon */
   color: white; /* hover पर टेक्स्ट सफेद */
   transition: 0.3s ease; /* smooth transition */
 }
@@ -270,8 +270,8 @@ nav ul li a:hover {
 /* ============================= */
 
 .vision-card {
-  background-color: maroon; /* कार्ड का बैकग्राउंड maroon */
-  color: white; /* टेक्स्ट सफेद */
+  background-color: #FFCE32; /* कार्ड का बैकग्राउंड maroon */
+  color: #1D63FF; /* टेक्स्ट सफेद */
   padding: 30px; /* अंदर जगह */
   border-radius: 10px; /* किनारे गोल */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* हल्का shadow */
@@ -285,7 +285,6 @@ nav ul li a:hover {
   font-size: 1.5rem; /* मध्यम फॉन्ट */
   margin-bottom: 15px; /* नीचे जगह */
   font-weight: bold; /* मोटा टेक्स्ट */
-  border-bottom: 2px solid white; /* नीचे सफेद लाइन */
   display: inline-block; /* लाइन सिर्फ टेक्स्ट तक */
   padding-bottom: 5px; /* टेक्स्ट और लाइन के बीच जगह */
 }
@@ -301,7 +300,7 @@ nav ul li a:hover {
   margin: 10px 0; /* हर आइटम के बीच जगह */
   padding: 8px 12px; /* अंदर जगह */
   background-color: #fff; /* आइटम का बैकग्राउंड सफेद */
-  color: maroon; /* टेक्स्ट maroon */
+  color: #1D63FF; /* टेक्स्ट maroon */
   border-radius: 5px; /* हल्के गोल किनारे */
   font-weight: 500; /* हल्का मोटा टेक्स्ट */
   display: flex; /* emoji और टेक्स्ट को एक लाइन में */
@@ -311,7 +310,7 @@ nav ul li a:hover {
 
 /* Hover Effect लिस्ट आइटम्स पर */
 .vision-card ul li:hover {
-  background-color: maroon; /* hover पर बैकग्राउंड maroon */
+  background-color: #FFCE32; /* hover पर बैकग्राउंड maroon */
   color: white; /* hover पर टेक्स्ट सफेद */
   transition: 0.3s ease; /* smooth transition */
 }
@@ -321,8 +320,8 @@ nav ul li a:hover {
 /* ============================= */
 
 .work-section {
-  background-color: #fff; /* बैकग्राउंड सफेद */
-  color: maroon; /* टेक्स्ट maroon */
+  background-color: #FFCE32; /* बैकग्राउंड सफेद */
+  color: #1D63FF; /* टेक्स्ट maroon */
   padding: 50px 20px;
   text-align: center;
 }
@@ -331,7 +330,7 @@ nav ul li a:hover {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 30px;
-  border-bottom: 3px solid maroon; /* नीचे maroon लाइन */
+  border-bottom: 3px solid black; /* नीचे maroon लाइन */
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -345,8 +344,8 @@ nav ul li a:hover {
 }
 
 .work-list li {
-  background-color: maroon; /* आइटम का बैकग्राउंड maroon */
-  color: white; /* टेक्स्ट सफेद */
+  background-color: white; /* आइटम का बैकग्राउंड maroon */
+  color: #1D63FF; /* टेक्स्ट सफेद */
   margin: 10px 0;
   padding: 12px 15px;
   border-radius: 5px;
@@ -356,8 +355,8 @@ nav ul li a:hover {
 }
 
 .work-list li:hover {
-  background-color: white; /* hover पर बैकग्राउंड सफेद */
-  color: maroon; /* hover पर टेक्स्ट maroon */
+  background-color: #FFCE32; /* hover पर बैकग्राउंड सफेद */
+  color: white; /* hover पर टेक्स्ट maroon */
   border: 2px solid maroon;
 }
 
@@ -366,8 +365,8 @@ nav ul li a:hover {
 /* ============================= */
 
 .donate-section {
-  background-color: maroon; /* बैकग्राउंड maroon */
-  color: white; /* टेक्स्ट सफेद */
+  background-color: #FFCE32; /* बैकग्राउंड maroon */
+  color: #1D63FF; /* टेक्स्ट सफेद */
   padding: 60px 20px;
   text-align: center;
 }
@@ -392,8 +391,8 @@ nav ul li a:hover {
 }
 
 .pay-box {
-  background-color: white; /* बॉक्स का बैकग्राउंड सफेद */
-  color: maroon; /* टेक्स्ट maroon */
+  background-color: #1D63FF; /* बॉक्स का बैकग्राउंड सफेद */
+  color: #FFCE32; /* टेक्स्ट maroon */
   padding: 25px;
   border-radius: 10px;
   width: 300px;
@@ -413,8 +412,8 @@ nav ul li a:hover {
 
 .upi-btn {
   display: inline-block;
-  background-color: maroon;
-  color: white;
+  background-color: #FFCE32;
+  color: #1D63FF;
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
@@ -423,9 +422,9 @@ nav ul li a:hover {
 }
 
 .upi-btn:hover {
-  background-color: white;
-  color: maroon;
-  border: 2px solid maroon;
+  background-color: black;
+  color: #fff;
+  border: 2px solid #FFCE32;
 }
 
 /* ============================= */
@@ -457,8 +456,8 @@ footer p {
 .contact-section span {
   display: inline-block;
   margin: 0 10px;
-  background-color: maroon;
-  color: white;
+  background-color: #FFCE32;
+  color: #1D63FF;
   padding: 5px 10px;
   border-radius: 5px;
 }
